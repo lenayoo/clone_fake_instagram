@@ -1,5 +1,6 @@
 import { Button } from "@mui/material";
 import { CustomTextField } from "../atoms/TextField";
+import { ImageInput } from "../atoms/ImageInput";
 
 export const Form = () => {
   const titleChangeHandler = () => {};
@@ -12,11 +13,7 @@ export const Form = () => {
         value="value"
         changeHandler={titleChangeHandler}
       />
-      <CustomTextField
-        label="Add your photo"
-        value="value"
-        changeHandler={photoChangeHandler}
-      />
+      <ImageInput imageChangeHandler={photoChangeHandler} />
       <Button>Submit</Button>
     </form>
   );
